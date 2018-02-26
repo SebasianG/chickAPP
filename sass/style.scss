@@ -1,0 +1,442 @@
+@mixin border-radius($rad) {
+    -webkit-border-radius: $rad;
+    -moz-border-radius: $rad;
+    -ms-border-radius: $rad;
+    border-radius: $rad;
+}
+
+$font-def: 'Montserrat',
+sans-serif;
+;
+$font-app: 'Roboto',
+sans-serif;
+$chich: #ff4600;
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    backface-visibility: hidden;
+}
+
+// Navi
+.navbar-default {
+    font-family: $font-def;
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;                    
+
+    .navbar-nav li a {
+        color: #000;
+        &:hover,
+        &:focus {
+            color: $chich;
+        }
+    }
+
+}
+
+// end navi
+//head section
+header {
+    height: 100%;
+    background-image: url('../images/ladingpage.jpg');
+    background-position: center;
+    background-size: cover;
+    
+    .contentH {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        
+        h1 {
+            color: #fff;
+            font-family: $font-def;
+            letter-spacing: 15px;
+            font-size: 100px;
+        }
+        
+        p {
+            font-size: 25px;
+            color: #fff;
+        }
+        
+        input {
+            color: #fff;
+            background-color: transparent;
+            border: 2px solid $chich;
+            @include border-radius(25px);
+            
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: none;
+                border-color: $chich;
+            }
+            
+            &::placeholder {
+                color: rgba(255,255,255, 0.9);
+            }
+            
+            
+        }
+    }
+}
+
+// end head
+// section 
+.intro {
+    padding: 70px 0;
+    color: #fff;
+    background-color: $chich;
+    text-align: center;
+}
+
+.w-sec {
+    padding: 90px 0;
+
+    h2 {
+        text-align: center;
+        font-size: 37px;
+        padding: 10px 0;
+    }
+
+    p {
+        color: #777;
+        font-size: 20px;
+        font-family: $font-def;
+        padding-bottom: 6px;
+    }
+
+    span {
+        color: $chich;
+    }
+}
+
+.d-sec {
+    padding: 70px 0;
+    background-color: #222;
+
+    h2 {
+        font-size: 37px;
+        padding: 10px 0;
+        color: #fff;
+    }
+
+    p {
+        font-size: 20px;
+        font-family: $font-def;
+        color: rgba(255, 255, 255, 0.7);
+        padding-bottom: 20px;
+    }
+
+}
+
+.cont {
+    font-family: $font-app;
+    padding: 40px 0;
+    background-color: $chich;
+    color: #fff;
+    text-align: center;
+}
+
+// end section
+// zdj 
+.zdj {
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    cursor: default;
+
+    h3 {
+        font-size: 45px;
+        display: inline-block;
+        line-height: 160px;
+        z-index: 2;
+    }
+}
+
+.zdj-1 {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    background: url(../images/writing.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.zdj-2 {
+    background: url(../images/concert.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.zdj-3 {
+    background: url(../images/writing.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+// end zdj
+// footer 
+.fote {
+    background-color: #222;
+    border-top: 4px solid $chich;
+
+    .about {
+        margin-top: 40px;
+        text-align: center;
+
+        p {
+            margin-top: 30px;
+            color: #999;
+            font-size: 13px;
+        }
+        .social-m {
+            margin-top: 15px;
+
+            ul > li > a {
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                border-radius: 50%;
+                font-size: 16px;
+                color: #fff;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    .foot-info {
+        margin-top: 10px;
+
+        .title {
+
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 16px;
+            border-left: 4px solid #ff4600;
+            padding-left: 5px;
+
+        }
+
+        ul > li > a  {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            padding: 2px 0;
+            
+            span {
+                &:hover,
+                &:focus {
+                    color: $chich;
+                }
+            }
+            
+            }
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+            color: #aaa;
+        }
+    }
+}
+
+// social Media :hover
+.fb:hover {
+    background: #3b5998;
+    color: #fff;
+    border-color: #3b5998;
+}
+
+.ig:hover {
+    background: #e95950;
+    color: #fff;
+    border-color: #e95950;
+}
+
+.gplus:hover {
+    background: #d34836;
+    color: #fff;
+    border-color: #d34836;
+}
+
+.yt:hover {
+    background: #cc181e;
+    color: #fff;
+    border-color: #cc181e;
+}
+
+// end footer
+
+// STOPKA 
+
+.stopka {
+    background: #111;
+    padding: 7px 0;
+    color: #999; 
+
+    p {
+        font-size: 16px;
+        padding: 10px 0;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+// Question
+
+.nb-form {
+    position: fixed;
+    z-index: 9999;
+    width: 300px;
+    background: #FFF;
+    right: 20px;
+    bottom: -328px;
+    transition: all .8s cubic-bezier(.22, .67, .43, 1.22) .2s;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+
+    &:hover,
+    &:focus {
+        bottom: 0;
+    }
+}
+
+// OFFER HTML
+
+.ofer-ex {
+    padding-top: 50px;
+    background-color: #222;
+    width: 100%;
+
+    .a {
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        padding: 0 15px 15px 0;
+
+        h4 + p {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+//button's 
+.reje {
+    font-size: 14px;
+    margin: 6px 0 0 0;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    @include border-radius(30px);
+    color: $chich;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: scale(1);
+
+    &:hover,
+    &:focus {
+        @include border-radius(30px);
+        background-color: $chich;
+        color: #fff;
+
+    }
+}
+
+.check {
+    padding: 12px 25px;
+    border: 1px solid $chich;
+    outline: none;
+    background-color: $chich;
+    color: #fff;
+    @include border-radius(30px);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background-color: transparent;
+        color: $chich;
+    }
+}
+
+.d-check {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 25px;
+    border: 1px solid $chich;
+    @include border-radius(30px);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+
+    &:hover,
+    &:focus {
+        transition: all .35s;
+        color: $chich;
+        text-decoration: none;
+    }
+}
+
+// respo 
+
+
+
+
+
+@media only screen and (min-width:768px) {
+    header {
+        .contentH {
+            
+            h1 {
+                font-size: 100px;
+            }
+            
+            p {
+                font-size: 27px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    
+    .w-sec {
+        text-align: center;
+    }
+    
+    .d-sec {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    header {
+        .contentH {
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
