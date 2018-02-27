@@ -100,6 +100,7 @@ header {
 
 .w-sec {
     padding: 90px 0;
+    text-align: center;
 
     h2 {
         text-align: center;
@@ -122,6 +123,7 @@ header {
 .d-sec {
     padding: 70px 0;
     background-color: #222;
+    text-align: center;
 
     h2 {
         font-size: 37px;
@@ -312,7 +314,267 @@ header {
     }
 }
 
+.nb-form {
+    position: fixed;
+    z-index: 9999;
+    width: 300px;
+    background: #FFF;
+    right: 20px;
+    bottom: -328px;
+    transition: all .8s cubic-bezier(.22, .67, .43, 1.22) .2s;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.nb-form:hover {
+    bottom: 0;
+}
+
+/*-- User Icon --*/
+
+.user-icon {
+    opacity: 0;
+    position: absolute;
+    top: -41px;
+    right: 12px;
+    height: 58px;
+    display: block;
+    width: 58px;
+    margin: 20px auto 15px;
+    border-radius: 50%;
+    transition: all 0.6s;
+}
+
+.nb-form:hover > .user-icon {
+    opacity: 1;
+    transition: all 0.7s;
+}
+
+/*-- Title --*/
+
+.nb-form .title {
+
+    background: #ff4600;
+    font-size: 16px !important;
+    padding: 20px 18px !important;
+    color: #fff !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/*-- Text --*/
+
+.nb-form p {
+    font-size: 13px;
+    margin: 0;
+    padding: 15px;
+    color: #666;
+}
+
+.nb-form p.message {
+    margin-left: 7px;
+}
+
+/*-- Form Elements --*/
+
+.nb-form form {
+    padding: 0 15px 15px 15px;
+}
+
+.nb-form input,
+.nb-form textarea {
+    font-size: 12px;
+    width: 254px;
+    max-width: 254px;
+    margin-bottom: 10px;
+    margin-left: 7px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    color: #999;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nb-form input:focus,
+.nb-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nb-form input[type='submit'] {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .4s ease;
+    color: #fff !important;
+    border: none;
+}
+
+
+.nb-form textarea {
+    min-height: 110px;
+}
+
+
+.nb-form input[type='submit'] {
+    background: #ff4600;
+}
+
+@media screen and (max-width: 768px) {
+    .nb-form {
+      display: none;
+    }
+}
+
 // OFFER HTML
+
+
+.featured-text {
+    font-family: "Oswald";
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #273832;
+    color: #fff;
+    position: absolute;
+    top: 22px;
+    left: -28px;
+    padding: 5px 0;
+    width: 126px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  .plus {
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-box-shadow: 8px 11px 14px -1px rgba(255,70,0,1);
+    -moz-box-shadow: 8px 11px 14px -1px rgba(255,70,0,1);
+    box-shadow: 8px 11px 14px -1px rgba(255,70,0,1);
+    overflow: hidden;
+    border: 1px solid #ff4600;
+    
+}
+
+.ofer {
+    height: 75vh;
+    width: 100%;
+    padding: 100px 0 60px 0;
+    background: url('../images/rejetop.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .pricingTable {
+        padding-top: 5px;
+        background: #273238;
+        text-align: center;
+        border-radius: 0 0 12px 12px;
+        -webkit-box-shadow: 8px 11px 14px -1px rgba(39,50,56,1);
+        -moz-box-shadow: 8px 11px 14px -1px rgba(39,50,56,1);
+        box-shadow: 8px 11px 29px -1px rgba(0,0,0,0.7);
+        transition: all .5s ease-in-out;
+
+        .pricingTable-header {
+            height: 190px;
+            position: relative;
+            color: #fff;
+            background-color: $chich;
+            transition: all .5s ease;
+
+            &::after {
+                content: '';
+                border-bottom: 40px solid #273238;
+                border-left: 263px solid transparent;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+            }
+
+            .heading {
+                display: block;
+                padding: 20px 0;
+
+                h3 {
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+            }
+
+            .price-value {
+                display: block;
+                font-size: 60px;
+                line-height: 60px;
+
+                .mo {
+                    font-size: 14px;
+                    display: block;
+                    line-height: 0px;
+                    text-transform: uppercase;
+                }
+
+                .currency {
+                    font-size: 20px;
+                    margin-right: 4px;
+                    position: relative;
+                    bottom: 0px;
+                }
+
+                .grosze {
+                    font-size: 18px;
+                    padding-left: 6px;
+                    position: relative;
+                    bottom: 30px;
+                }
+            }
+        }
+
+        .pricingContent {
+            text-transform: uppercase;
+            color: #fff;
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+
+                li {
+                    padding: 15px 0;
+                    border-bottom: 1px solid $chich;
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .pricingTable-sign-up{
+        padding: 30px 0;
+
+        .btn-block {
+            width: 80%;
+            margin: 0 auto;
+            background: #273238;
+            border:2px solid #ff4600;
+            color:#fff;
+            padding: 15px 12px;
+            text-transform: uppercase;
+            font-size: 18px;
+            transition: 0.5s;
+
+            &:hover,
+            &:focus {
+                color: $chich;
+            }
+        }
+    }
+}
 
 .ofer-ex {
     padding-top: 50px;
@@ -324,7 +586,6 @@ header {
         padding: 10px 0;
         text-align: center;
         color: #fff;
-        padding: 0 15px 15px 0;
 
         h4 + p {
             text-align: center;
@@ -399,7 +660,16 @@ header {
 // respo 
 
 
-
+@media screen and (max-width: 990px){
+    .pricingTable{
+        margin-bottom: 40px;
+    
+    
+        .pricingTable-header:after{
+        border-left: 349px solid transparent;
+        }
+    }   
+}
 
 
 @media only screen and (min-width:768px) {
@@ -424,6 +694,10 @@ header {
     .d-sec {
         text-align: center;
     }
+
+    .ofer {
+        height: auto;
+    }
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -436,6 +710,26 @@ header {
             p {
                 font-size: 18px;
             }
+        }
+    }
+
+    .pricingTable{
+        overflow: hidden;
+
+        .pricingTable-header:after {
+        border-left: 459px solid rgba(0, 0, 0, 0);
+         }
+    }
+
+    .ofer {
+        height: auto;
+    }
+
+    .ofer-ex {
+        padding: 10px 0;
+
+        .a {
+            padding: 14px 15px;
         }
     }
 }

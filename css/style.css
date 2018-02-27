@@ -71,6 +71,7 @@ header .contentH input::placeholder {
 
 .w-sec {
   padding: 90px 0;
+  text-align: center;
 }
 .w-sec h2 {
   text-align: center;
@@ -90,6 +91,7 @@ header .contentH input::placeholder {
 .d-sec {
   padding: 70px 0;
   background-color: #222;
+  text-align: center;
 }
 .d-sec h2 {
   font-size: 37px;
@@ -246,6 +248,240 @@ header .contentH input::placeholder {
   bottom: 0;
 }
 
+.nb-form {
+  position: fixed;
+  z-index: 9999;
+  width: 300px;
+  background: #FFF;
+  right: 20px;
+  bottom: -328px;
+  transition: all 0.8s cubic-bezier(0.22, 0.67, 0.43, 1.22) 0.2s;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.nb-form:hover {
+  bottom: 0;
+}
+
+/*-- User Icon --*/
+.user-icon {
+  opacity: 0;
+  position: absolute;
+  top: -41px;
+  right: 12px;
+  height: 58px;
+  display: block;
+  width: 58px;
+  margin: 20px auto 15px;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.nb-form:hover > .user-icon {
+  opacity: 1;
+  transition: all 0.7s;
+}
+
+/*-- Title --*/
+.nb-form .title {
+  background: #ff4600;
+  font-size: 16px !important;
+  padding: 20px 18px !important;
+  color: #fff !important;
+  border-radius: 10px 10px 0 0;
+}
+
+/*-- Text --*/
+.nb-form p {
+  font-size: 13px;
+  margin: 0;
+  padding: 15px;
+  color: #666;
+}
+
+.nb-form p.message {
+  margin-left: 7px;
+}
+
+/*-- Form Elements --*/
+.nb-form form {
+  padding: 0 15px 15px 15px;
+}
+
+.nb-form input,
+.nb-form textarea {
+  font-size: 12px;
+  width: 254px;
+  max-width: 254px;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  color: #999;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nb-form input:focus,
+.nb-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nb-form input[type='submit'] {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .4s ease;
+  color: #fff !important;
+  border: none;
+}
+
+.nb-form textarea {
+  min-height: 110px;
+}
+
+.nb-form input[type='submit'] {
+  background: #ff4600;
+}
+
+@media screen and (max-width: 768px) {
+  .nb-form {
+    display: none;
+  }
+}
+.featured-text {
+  font-family: "Oswald";
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #273832;
+  color: #fff;
+  position: absolute;
+  top: 22px;
+  left: -28px;
+  padding: 5px 0;
+  width: 126px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.plus {
+  transition: all 0.5s ease-in-out 0s;
+  -webkit-box-shadow: 8px 11px 14px -1px #ff4600;
+  -moz-box-shadow: 8px 11px 14px -1px #ff4600;
+  box-shadow: 8px 11px 14px -1px #ff4600;
+  overflow: hidden;
+  border: 1px solid #ff4600;
+}
+
+.ofer {
+  height: 75vh;
+  width: 100%;
+  padding: 100px 0 60px 0;
+  background: url("../images/rejetop.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.ofer .pricingTable {
+  padding-top: 5px;
+  background: #273238;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  -webkit-box-shadow: 8px 11px 14px -1px #273238;
+  -moz-box-shadow: 8px 11px 14px -1px #273238;
+  box-shadow: 8px 11px 29px -1px rgba(0, 0, 0, 0.7);
+  transition: all .5s ease-in-out;
+}
+.ofer .pricingTable .pricingTable-header {
+  height: 190px;
+  position: relative;
+  color: #fff;
+  background-color: #ff4600;
+  transition: all .5s ease;
+}
+.ofer .pricingTable .pricingTable-header::after {
+  content: '';
+  border-bottom: 40px solid #273238;
+  border-left: 263px solid transparent;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.ofer .pricingTable .pricingTable-header .heading {
+  display: block;
+  padding: 20px 0;
+}
+.ofer .pricingTable .pricingTable-header .heading h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.ofer .pricingTable .pricingTable-header .price-value {
+  display: block;
+  font-size: 60px;
+  line-height: 60px;
+}
+.ofer .pricingTable .pricingTable-header .price-value .mo {
+  font-size: 14px;
+  display: block;
+  line-height: 0px;
+  text-transform: uppercase;
+}
+.ofer .pricingTable .pricingTable-header .price-value .currency {
+  font-size: 20px;
+  margin-right: 4px;
+  position: relative;
+  bottom: 0px;
+}
+.ofer .pricingTable .pricingTable-header .price-value .grosze {
+  font-size: 18px;
+  padding-left: 6px;
+  position: relative;
+  bottom: 30px;
+}
+.ofer .pricingTable .pricingContent {
+  text-transform: uppercase;
+  color: #fff;
+}
+.ofer .pricingTable .pricingContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+.ofer .pricingTable .pricingContent ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #ff4600;
+}
+.ofer .pricingTable .pricingContent ul li:last-child {
+  border: none;
+}
+.ofer .pricingTable-sign-up {
+  padding: 30px 0;
+}
+.ofer .pricingTable-sign-up .btn-block {
+  width: 80%;
+  margin: 0 auto;
+  background: #273238;
+  border: 2px solid #ff4600;
+  color: #fff;
+  padding: 15px 12px;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.ofer .pricingTable-sign-up .btn-block:hover, .ofer .pricingTable-sign-up .btn-block:focus {
+  color: #ff4600;
+}
+
 .ofer-ex {
   padding-top: 50px;
   background-color: #222;
@@ -256,7 +492,6 @@ header .contentH input::placeholder {
   padding: 10px 0;
   text-align: center;
   color: #fff;
-  padding: 0 15px 15px 0;
 }
 .ofer-ex .a h4 + p {
   text-align: center;
@@ -330,6 +565,14 @@ header .contentH input::placeholder {
   text-decoration: none;
 }
 
+@media screen and (max-width: 990px) {
+  .pricingTable {
+    margin-bottom: 40px;
+  }
+  .pricingTable .pricingTable-header:after {
+    border-left: 349px solid transparent;
+  }
+}
 @media only screen and (min-width: 768px) {
   header .contentH h1 {
     font-size: 100px;
@@ -346,6 +589,10 @@ header .contentH input::placeholder {
   .d-sec {
     text-align: center;
   }
+
+  .ofer {
+    height: auto;
+  }
 }
 @media only screen and (max-device-width: 480px) {
   header .contentH h1 {
@@ -353,5 +600,23 @@ header .contentH input::placeholder {
   }
   header .contentH p {
     font-size: 18px;
+  }
+
+  .pricingTable {
+    overflow: hidden;
+  }
+  .pricingTable .pricingTable-header:after {
+    border-left: 459px solid transparent;
+  }
+
+  .ofer {
+    height: auto;
+  }
+
+  .ofer-ex {
+    padding: 10px 0;
+  }
+  .ofer-ex .a {
+    padding: 14px 15px;
   }
 }
