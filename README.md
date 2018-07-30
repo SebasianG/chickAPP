@@ -1,3 +1,3 @@
 # chickAPP
-start;up
+start'up failed
 All rights reserved !
